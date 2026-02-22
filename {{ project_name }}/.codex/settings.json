@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "make fmt",
+      "make lint",
+      "make test",
+      "make cov",
+      "make sync",
+      "uv run *",
+      "git diff *",
+      "git log *",
+      "git status",
+      "git add *"
+    ]
+  }
+}

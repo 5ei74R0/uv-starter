@@ -1,0 +1,25 @@
+project_name:
+  type: str
+  help: "Name ur project (Use snake_case)."
+  default: "prj"
+
+python_version:
+  type: str
+  help: "Python version to use."
+  default: "3.12"
+  choices:
+    - "3.10"
+    - "3.11"
+    - "3.12"
+    - "3.13"
+
+_exclude:
+  - ".git"
+  - "copier.yaml"
+  - "/README.md"
+
+_templates_suffix: ""
+
+_tasks:
+  - ["ln", "-s", "{{ project_name }}/.codex", "{{ project_name }}/.claude"]
+  - ["ln", "-s", "{{ project_name }}/AGENTS.md", "{{ project_name }}/CLAUDE.md"]
