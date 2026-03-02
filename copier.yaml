@@ -21,5 +21,6 @@ _exclude:
 _templates_suffix: ""
 
 _tasks:
-  - ["ln", "-s", "{{ project_name }}/.codex", "{{ project_name }}/.claude"]
-  - ["ln", "-s", "{{ project_name }}/AGENTS.md", "{{ project_name }}/CLAUDE.md"]
+  - ["cd", "{{ project_name }}", "&&", "ln", "-s", ".codex", ".claude"]
+  - ["cd", "{{ project_name }}", "&&", "ln", "-s", "AGENTS.md", "CLAUDE.md"]
+  - ["cd", "{{ project_name }}", "&&", "make", "sync"]
