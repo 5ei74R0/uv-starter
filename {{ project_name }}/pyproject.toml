@@ -26,13 +26,11 @@ dev = [
 
 [tool.uv]
 exclude-newer = "1 week"
-
 {% if use_flatt_index %}
 [[tool.uv.index]]
 name = "flatt"
 url = "https://pypi.flatt.tech/simple/"
 default = true
-
 {% endif %}
 [tool.ruff]
 target-version = "py{{ python_version | replace('.', '') }}"
