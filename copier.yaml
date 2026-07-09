@@ -13,6 +13,11 @@ python_version:
     - "3.12"
     - "3.13"
 
+use_flatt_index:
+  type: bool
+  help: "Route package resolution through Flatt's PyPI proxy?"
+  default: false
+
 _exclude:
   - ".git"
   - "copier.yaml"
@@ -21,6 +26,5 @@ _exclude:
 _templates_suffix: ""
 
 _tasks:
-  - ["cd", "{{ project_name }}", "&&", "ln", "-s", ".codex", ".claude"]
   - ["cd", "{{ project_name }}", "&&", "ln", "-s", "AGENTS.md", "CLAUDE.md"]
   - ["cd", "{{ project_name }}", "&&", "make", "sync"]
